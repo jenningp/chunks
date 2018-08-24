@@ -1,19 +1,27 @@
 ---
-title: "Chunk 1"
+title: "Chunk 3"
 output: html_document
 ---
 
-```{r loading}
+# Boston employee pay 2014
+
+```{r loading, warning=F, message=F, echo=FALSE}
+
 # load packages
+
 library(tidyverse)
 
-# Loading the Boston city payroll
+
+#Loading the Boston city payroll
 payroll <- read_csv("data/bostonpayroll2013.csv")
 ```
 
-Let's look at the data in R Markdown with a package called [`DT`](https://rstudio.github.io/DT/) that uses the Datatables [jquery library](https://datatables.net/).
+Let's look at the data in R Markdown with a new package called [`DT`](https://rstudio.github.io/DT/) that uses the Datatables [jquery library](https://datatables.net/)
 
-```{r display_data}
+```{r display_data, warning=F, echo=F}
+
 library(DT)
+
 datatable(payroll)
+
 ```
